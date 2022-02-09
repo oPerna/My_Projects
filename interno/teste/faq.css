@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  --softRed: hsl(14, 88%, 65%);
+  --veryDarkGrayBlue: hsl(237, 12%, 33%);
+  --darkGrayBlue: hsl(240, 6%, 50%);
+  --lightGrayBlue: hsl(240, 5%, 91%);
+  --fontSize: 12px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--fontSize);
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(hsl(0, 0%, 35%), hsl(240, 73%, 65%));
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.faq {
+    width: 350px;
+    border-bottom: 1px solid #e8e8ea;
+}
+
+.duvida {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.titulo-duvida {
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 1.4rem 0rem;
+}
+
+.active .titulo-duvida {
+    font-weight: bolder;
+}
+
+.duvida img {
+    width: 40px;
+    align-self: center;
+    transition: ease-in-out 0.3s;
+}
+
+.active .duvida img {
+    transform: rotate(180deg);
+}
+
+.resposta {
+    display: none;
+}
+
+.active .resposta {
+    display: block;
+    padding-bottom: 1.3rem;
+    color: var(--darkGrayBlue);
+}
