@@ -38,7 +38,7 @@ nav {
     box-shadow: 0px 5px 10px #000;
     
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -64,9 +64,22 @@ nav {
 
 .nav-list li {
     letter-spacing: 3px;
-    margin-left: 30px;
+    margin-left: 100px;
     
     transition: 0.3s;
+}
+
+.nav-list .Inicio {
+    color: var(--cor-3);
+}
+
+.nav-list .Inicio::after {
+    content: '';
+    width: 99%;
+    height: 2px;
+    margin-top: 2vh;
+    background-color: var(--cor-3);
+    display: block;
 }
 
 .nav-list a:hover {
@@ -494,12 +507,14 @@ footer {
 
 .box {
     margin: 0 auto;
+    width: 100%;
+    border-right: solid 1px;
 
     color: #fff;
 
     display: grid;    
-
-    grid-gap: 10px;
+    text-align: center;
+    gap: 10px;
 }
 
 .box ul {
@@ -604,5 +619,6 @@ footer {
     .section-footer {
         grid-template-columns: 1fr 1fr;
     }
+    
 }
 
